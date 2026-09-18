@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #FAF8F5;
+    --foreground: #181B1A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FAF8F5;
+    color: #181B1A;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: #FAF8F5;
+    color: #181B1A;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #0A2218;
+    color: #FAF8F5;
+  }
+}
+
+/* Custom Luxury Glassmorphism and Effects */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 226, 216, 0.85);
+}
+
+.glass-dark {
+  background: rgba(10, 34, 24, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(43, 104, 78, 0.3);
+}
+
+.glass-floating {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 40px -15px rgba(10, 34, 24, 0.12);
+}
+
+.border-subtle {
+  border-color: rgba(223, 211, 192, 0.65);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C7B59A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0A2218;
+}
+
+/* Shimmer and Glow Animations */
+@keyframes softPulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 6s ease-in-out infinite;
+}
+
+/* Number typography helper */
+.font-editorial-num {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-feature-settings: "onum";
+}
